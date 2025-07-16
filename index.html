@@ -10,7 +10,7 @@
     body {
       background: linear-gradient(5deg, rgb(0, 99, 99), rgb(0, 66, 66));
       min-height: 100vh;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: serif;
     }
     .flex {
       display: flex;
@@ -26,9 +26,23 @@
       justify-content: center;
       text-align: center;
     }
+    .gap {
+      gap: 1rem;
+    }
+    #docking-images {
+      margin: 1rem 0;
+    }
     #title {
       color: rgb(0, 99, 99);
       text-shadow: 0 0 .3rem #222;
+    }
+    img {
+      border: #222 solid 1px;
+      border-radius: .5rem; 
+      transition: all linear 1s;
+    }
+    img:hover {
+      opacity: .5;
     }
     table {
       border: #222 solid 1px;
@@ -43,6 +57,11 @@
       opacity: .7;
       padding: 0 .5rem;
     }
+    td {
+      color: white;
+      text-align: left;
+      text-shadow: 0 0 .3rem #222;
+    }
   </style>
 </head>
 <body>
@@ -54,14 +73,40 @@
         <tr>
           <th>Ligante</th>
           <th>GBind (kcal/mol)</th>
-          <th>Aminoácidos interaringo com as ligações de hidrogênio</th>
+          <th>Aminoácidos interagindo através de ligações de hidrogênio</th>
           <th>Aminoácidos que fazem interações hidrofóbicas</th>
         </tr>
       </thead>
       <tbody id="table-body">
-
+        <tr>
+          <td>1HSG_MK1</td>
+          <td>-5.53</td>
+          <td>Gln7 (3.09), Leu10 (3.22), Thr4 (2.82)</td>
+          <td>Arg8, Gln2, Ile3, Pro1, Val11</td>
+        </tr>
+        <tr>
+          <td>1HSG_UN1</td>
+          <td>-6.489</td>
+          <td>Leu5 (2.82), Leu24 (3.15), Thr26 (3.26)</td>
+          <td>Arg8, Asp25, Gln7, Ile3, Leu23, Leu97, Pro9, Trp6</td>
+        </tr>
+        <tr>
+          <td>1HSG_COC</td>
+          <td>-5.959</td>
+          <td>Thr4 (2.96)</td>
+          <td>Asp25, Ile3, Leu5, Leu97, Pro9, Val11</td>
+        </tr>
       </tbody>
     </table>
+
+    <div id="docking-images" class="flex column going-center gap">
+      <img src="./proteina-1hsg-ligante-MK1-docagem.png" alt="">
+      <img src="./img-proteina-1hsg-ligante-MK1-docagem.png" alt="">
+      <img src="./proteina-1hsg-ligante-1UN-docagem.png" alt="">
+      <img src="./img-proteina-1hsg-ligante-1UN-docagem.png" alt="">
+      <img src="./proteina-1hsg-ligante-COC-docagem.png" alt="">
+      <img src="./img-proteina-1hsg-ligante-COC-docagem.png" alt="">
+    </div>
 
   </div>
 </body>
