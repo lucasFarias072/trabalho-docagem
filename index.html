@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho final - Bioinformática</title>
+  <style>
+    body {
+      background: linear-gradient(5deg, rgb(0, 99, 99), rgb(0, 66, 66));
+      min-height: 100vh;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .flex {
+      display: flex;
+    }
+    .column {
+      flex-flow: column wrap;
+    }
+    .row {
+      flex-flow: row wrap;
+    }
+    .going-center {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    #title {
+      color: rgb(0, 99, 99);
+      text-shadow: 0 0 .3rem #222;
+    }
+    table {
+      border: #222 solid 1px;
+      border-radius: .3rem;
+      padding: 1rem;
+    }
+    th {
+      background: #ff9;
+      border: #111 solid 1.5px;
+      border-radius: .5rem;
+      color: black;
+      opacity: .7;
+      padding: 0 .5rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="container" class="flex column going-center">
+    <h2 id="title">Trabalho Bioinformática</h2>
+    
+    <table id="docking-table">
+      <thead>
+        <tr>
+          <th>Ligante</th>
+          <th>GBind (kcal/mol)</th>
+          <th>Aminoácidos interaringo com as ligações de hidrogênio</th>
+          <th>Aminoácidos que fazem interações hidrofóbicas</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+
+      </tbody>
+    </table>
+
+  </div>
+</body>
+</html>
